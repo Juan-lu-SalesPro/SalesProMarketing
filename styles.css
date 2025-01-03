@@ -1,0 +1,77 @@
+/* Definición de colores corporativos */
+:root {
+    --color-primario: #c5ccd3; /* Azul corporativo */
+    --color-secundario: #6C757D; /* Gris corporativo */
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+    --color-texto: #333333;
+    --color-fondo: #f4f4f4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+header .logo {
+    width: 150px; /* Ajusta el ancho del logo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1em;
+}
+
+.card img {
+    border-radius: 8px 8px 0 0;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .col-md-4, .col-md-6 {
+        flex: 1 1 100%;
+    }
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo para la sección de inicio */
+#inicio {
+    position: relative;
+    background: url('imagenes/tu-imagen.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#inicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo difuminado */
+    z-index: 1;
+}
+
+#inicio h2,
+#inicio p {
+    position: relative;
+    z-index: 2;
+}
